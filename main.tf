@@ -1,11 +1,11 @@
 terraform {
  
-  cloud {
-    organization = "policy-as-code-training"
-    workspaces {
-      name = "tf-vault-qa-drp"
-    }
-  }
+ # cloud {
+  #  organization = "policy-as-code-training"
+   # workspaces {
+    #  name = "tf-vault-qa-drp"
+    #}
+  #}
   
   required_providers {
     aws = {
@@ -128,9 +128,9 @@ module "ec2_instances" {
   }
 }
 
-module "s3_bucket" {
-  source  = "app.terraform.io/policy-as-code-training/terraform-aws-s3-bucket-drp/aws"
-  version = "1.1.0"
+#module "s3_bucket" {
+#  source  = "app.terraform.io/policy-as-code-training/terraform-aws-s3-bucket-drp/aws"
+ # version = "1.1.0"
   
-  bucket_name = "terraform-aws-s3-bucket-drp"
-}
+ # bucket_name = "terraform-aws-s3-bucket-drp"
+#}
